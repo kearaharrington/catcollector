@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Name: {{ dog.name }}</h2>
+<p>Breed: {{ dog.breed }}</p>
+<p>Description: {{ dog.description }}</p>
+<p>Age: {{ dog.age }}</p>
+
+<!-- Add links for update and delete -->
+<a href="{% url 'dogs_update' dog.id %}" class="btn btn-warning">Update Details</a>
+<a href="{% url 'dogs_delete' dog.id %}" class="btn btn-danger">Delete This Dog</a>
+
+{% endblock %}
